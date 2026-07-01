@@ -38,15 +38,13 @@ export default function AppleMagicWords() {
       gsap.set(word3Ref.current, { opacity: 0.15, y: 0 });
       gsap.set(magicalGradientRef.current, { opacity: 0 });
 
-      // Timeline de ScrollTrigger para o efeito Pin e transições de palavras
+      // Timeline de ScrollTrigger para scroll natural e transições de palavras
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top top',
-          end: '+=200%', // Duração do scroll ligeiramente maior para acomodar as duas fases
-          pin: true,
-          scrub: 1,
-          anticipatePin: 1
+          start: 'top 75%', // Inicia quando o topo da seção atinge 75% da viewport
+          end: 'bottom 25%', // Finaliza quando a base atinge 25% da viewport
+          scrub: 1.2,        // Suaviza a resposta da timeline com a rolagem
         }
       });
 
