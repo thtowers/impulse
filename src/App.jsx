@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import HeroVideo from './components/HeroVideo';
 import AppleMagicWords from './components/AppleMagicWords';
 import ImpressiveWorks from './components/ImpressiveWorks';
 import Showcase from './components/Showcase';
@@ -11,7 +12,10 @@ function App() {
       {/* 1. Header / Barra de Navegação */}
       <Header />
       
-      {/* Seção Principal Premium de Palavras Mágicas */}
+      {/* Seção Hero de Vídeo Background */}
+      <HeroVideo />
+      
+      {/* Seção Premium de Palavras Mágicas */}
       <AppleMagicWords />
       
       {/* Seção de Vídeo e Destaques Bento Grid */}
