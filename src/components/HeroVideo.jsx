@@ -33,7 +33,7 @@ export default function HeroVideo() {
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-blue-500/10 rounded-full filter blur-[80px] md:blur-[120px] z-10 pointer-events-none" />
 
       {/* 3. Conteúdo Centralizado */}
-      <div className="relative z-20 text-center text-white px-6 max-w-4xl flex flex-col items-center gap-6 md:gap-8 select-none">
+      <div className="relative z-20 text-center text-white px-6 max-w-4xl flex flex-col items-center gap-6 md:gap-8">
         
         {/* Tag Premium no topo do Hero */}
         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-[11px] font-semibold tracking-widest text-blue-400 uppercase">
@@ -59,7 +59,7 @@ export default function HeroVideo() {
             href="https://wa.me/5521979362517?text=Olá, gostaria de solicitar um orçamento para criação do meu site ou catálogo!"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium text-sm px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] shadow-[0_4px_20px_rgba(0,113,227,0.35)]"
+            className="w-full sm:w-auto bg-tertiary hover:bg-tertiary-hover text-white font-medium text-sm px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] shadow-[0_4px_20px_rgba(0,113,227,0.35)]"
           >
             Quero meu Projeto Premium
           </a>

@@ -5,17 +5,19 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      const heroHeight = window.innerHeight;
+      setScrolled(window.scrollY >= heroHeight - 64);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 border-b transition-all duration-300 ${
       scrolled 
-        ? 'bg-[#f5f5f7]/85 border-black/10 backdrop-blur-[20px] saturate-[180%]' 
-        : 'bg-black/20 border-white/5 backdrop-blur-[15px]'
+        ? 'bg-bg-base/80 border-black/5 backdrop-blur-[12px] saturate-[180%]' 
+        : 'bg-bg-base/95 border-black/10 shadow-md'
     }`}>
       <div className="max-w-[1024px] mx-auto px-6 h-16 flex items-center justify-between antialiased">
         {/* Lado Esquerdo: Logo estilo Apple */}
@@ -31,7 +33,7 @@ export default function Header() {
             <img 
               src="/assets/logo_atual.png" 
               alt="Impulse Logo" 
-              className={`h-[50px] w-auto transition-all duration-300 ${scrolled ? '' : 'brightness-125'}`} 
+              className="h-[50px] w-auto transition-all duration-300" 
             />
           </a>
         </div>
@@ -39,9 +41,7 @@ export default function Header() {
         {/* Lado Direito: Links e CTA estilo Apple local nav */}
         <div className="flex items-center gap-6">
           <nav aria-label="Navegação local" className="hidden sm:block">
-            <ul className={`flex items-center gap-6 text-[12px] font-normal tracking-tight transition-colors duration-300 ${
-              scrolled ? 'text-zinc-600' : 'text-zinc-300'
-            }`}>
+            <ul className="flex items-center gap-6 text-[12px] font-normal tracking-tight transition-colors duration-300 text-text-muted">
               <li>
                 <a 
                   href="#hero-video" 
@@ -49,7 +49,7 @@ export default function Header() {
                     e.preventDefault();
                     document.getElementById('hero-video')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className={`transition-colors duration-300 ${scrolled ? 'hover:text-black' : 'hover:text-white'}`}
+                  className="transition-colors duration-300 hover:text-text-main"
                 >
                   Início
                 </a>
@@ -61,7 +61,7 @@ export default function Header() {
                     e.preventDefault();
                     document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className={`transition-colors duration-300 ${scrolled ? 'hover:text-black' : 'hover:text-white'}`}
+                  className="transition-colors duration-300 hover:text-text-main"
                 >
                   Catálogos
                 </a>
@@ -73,7 +73,7 @@ export default function Header() {
             href="https://wa.me/5521979362517?text=Olá, gostaria de solicitar um orçamento para criação do meu site ou catálogo!" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-[#0071e3] hover:bg-[#0077ed] text-white text-[12px] font-normal px-3 py-1 rounded-full transition-all duration-200"
+            className="bg-tertiary hover:bg-tertiary-hover text-white text-[12px] font-normal px-3 py-1 rounded-full transition-all duration-200"
           >
             Falar com Agência
           </a>

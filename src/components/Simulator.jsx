@@ -67,8 +67,8 @@ export default function Simulator() {
   return (
     <section className="py-24 px-6 max-w-6xl mx-auto" id="simulator">
       <div className="text-center mb-16">
-        <span className="text-blue-600 font-semibold text-xs tracking-widest uppercase block mb-3">O Simulador</span>
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-zinc-900">Configure seu catálogo agora</h2>
+        <span className="text-secondary font-semibold text-xs tracking-widest uppercase block mb-3">O Simulador</span>
+        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-title">Configure seu catálogo agora</h2>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -76,13 +76,13 @@ export default function Simulator() {
         <div className="bg-white border border-zinc-200/80 rounded-3xl p-8 md:p-10 shadow-xl backdrop-blur-xl">
           
           <div className="mb-6">
-            <label htmlFor="sim-shop-name" className="block text-xs font-bold uppercase tracking-wider text-zinc-500 mb-2">
+            <label htmlFor="sim-shop-name" className="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2">
               Nome da sua Loja:
             </label>
             <input 
               type="text" 
               id="sim-shop-name" 
-              className="w-full bg-zinc-50 border border-zinc-200 text-zinc-900 rounded-xl px-5 py-3.5 focus:bg-white focus:border-blue-500 focus:outline-none transition-all duration-200 text-sm"
+              className="w-full bg-zinc-50 border border-zinc-200 text-text-main rounded-xl px-5 py-3.5 focus:bg-white focus:border-tertiary focus:outline-none transition-all duration-200 text-sm"
               placeholder="Ex: Hamburgueria Real" 
               value={shopName}
               onChange={(e) => setShopName(e.target.value)}
@@ -90,7 +90,7 @@ export default function Simulator() {
           </div>
 
           <div className="mb-6">
-            <label className="block text-xs font-bold uppercase tracking-wider text-zinc-500 mb-2">
+            <label className="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2">
               Escolha o Segmento:
             </label>
             <div className="grid grid-cols-2 gap-3">
@@ -102,8 +102,8 @@ export default function Simulator() {
                     onClick={() => setActiveSegment(seg.id)}
                     className={`flex flex-col items-center justify-center p-4 rounded-xl border text-center transition-all duration-200 ${
                       isSelected
-                        ? 'border-blue-500 bg-blue-50/50 text-blue-600 shadow-sm'
-                        : 'border-zinc-200 bg-zinc-50/50 text-zinc-600 hover:text-zinc-900 hover:border-zinc-300 hover:bg-zinc-50'
+                        ? 'border-tertiary bg-tertiary/10 text-tertiary shadow-sm'
+                        : 'border-zinc-200 bg-zinc-50/50 text-text-muted hover:text-text-main hover:border-zinc-300 hover:bg-zinc-50'
                     }`}
                   >
                     <span className="text-xl mb-1">{seg.icon}</span>
@@ -115,7 +115,7 @@ export default function Simulator() {
           </div>
 
           <div className="mb-8">
-            <label className="block text-xs font-bold uppercase tracking-wider text-zinc-500 mb-2">
+            <label className="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2">
               Cor Principal (Visual):
             </label>
             <div className="flex gap-4">
@@ -127,7 +127,7 @@ export default function Simulator() {
                     onClick={() => setActiveColor(color.id)}
                     className={`w-11 h-11 rounded-full flex items-center justify-center border-2 transition-all duration-200`}
                     style={{ 
-                      borderColor: isSelected ? '#0071e3' : 'transparent',
+                      borderColor: isSelected ? 'var(--color-tertiary)' : 'transparent',
                     }}
                   >
                     <span 
@@ -144,7 +144,7 @@ export default function Simulator() {
             href={getWhatsAppLink()} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="w-full block py-4 text-center font-semibold text-sm text-white bg-[#0071e3] hover:bg-[#0077ed] rounded-full transition-all duration-200 shadow-md shadow-blue-500/10 hover:-translate-y-0.5"
+            className="w-full block py-4 text-center font-semibold text-sm text-white bg-tertiary hover:bg-tertiary-hover rounded-full transition-all duration-200 shadow-md shadow-tertiary/10 hover:-translate-y-0.5"
           >
             Encomendar Catálogo Oficial
           </a>
@@ -160,21 +160,21 @@ export default function Simulator() {
             <div className="flex-grow flex flex-col p-4 pt-6 overflow-y-auto no-scrollbar">
               
               <header className="text-center py-4 border-b border-zinc-100">
-                <div className="font-bold text-zinc-900 text-base tracking-tight">{shopName || 'Minha Loja'}</div>
-                <div className="text-[10px] text-zinc-400 mt-0.5">Catálogo Digital WhatsApp</div>
+                <div className="font-bold text-text-main text-base tracking-tight">{shopName || 'Minha Loja'}</div>
+                <div className="text-[10px] text-text-muted mt-0.5">Catálogo Digital WhatsApp</div>
               </header>
 
               <div className="w-full h-28 rounded-xl overflow-hidden mt-4">
                 <img src={mockData.banner} alt="Mock Banner" className="w-full h-full object-cover" />
               </div>
 
-              <h4 className="text-[11px] font-bold uppercase tracking-wider text-zinc-500 mt-5 mb-3">Mais Vendidos</h4>
+              <h4 className="text-[11px] font-bold uppercase tracking-wider text-text-muted mt-5 mb-3">Mais Vendidos</h4>
 
               <div className="bg-zinc-50 border border-zinc-100 rounded-xl p-3 flex gap-3 items-center shadow-sm">
                 <img src={mockData.prodImg} alt="Mock Product" className="w-14 h-14 rounded-lg object-cover" />
                 <div className="flex-grow min-w-0">
-                  <div className="font-bold text-xs text-zinc-900 truncate">{mockData.prodName}</div>
-                  <div className="text-[9px] text-zinc-500 line-clamp-2 mt-0.5 leading-normal">{mockData.prodDesc}</div>
+                  <div className="font-bold text-xs text-text-main truncate">{mockData.prodName}</div>
+                  <div className="text-[9px] text-text-muted line-clamp-2 mt-0.5 leading-normal">{mockData.prodDesc}</div>
                   <div className="font-bold text-xs mt-1.5" style={{ color: selectedColorHex }}>{mockData.prodPrice}</div>
                 </div>
                 <button 

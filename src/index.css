@@ -1,1 +1,67 @@
 @import "tailwindcss";
+
+@theme {
+  /* Mapeamento de variáveis semânticas no Tailwind v4 */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-hover: var(--tertiary-hover);
+  --color-title: var(--title);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-bg-base: var(--bg-base);
+  --color-success: var(--success);
+  --color-error: var(--error);
+}
+
+:root {
+  /* Paleta Base */
+  --primary: #090d29;
+  --primary-hover: #05081a;
+  --secondary: #29368f;
+  --secondary-hover: #1e276b;
+  --tertiary: #0071e3;
+  --tertiary-hover: #0077ed;
+  
+  /* Textos e Títulos */
+  --title: #090d29;
+  --text-main: #1d1d1f;
+  --text-muted: #86868b;
+  
+  /* Superfícies */
+  --bg-base: #f5f5f7;
+  
+
+  /* Feedbacks */
+  --success: #10b981;
+  --error: #ef4444;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scaleUp {
+  0% { transform: translate(-50%, 0) scale(1); }
+  50% { transform: translate(-50%, -4px) scale(1.03); }
+  100% { transform: translate(-50%, 0) scale(1); }
+}
+
+.animate-cart-bounce {
+  animation: scaleUp 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+

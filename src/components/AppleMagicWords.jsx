@@ -42,9 +42,8 @@ export default function AppleMagicWords() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top 75%', // Inicia quando o topo da seção atinge 75% da viewport
-          end: 'bottom 25%', // Finaliza quando a base atinge 25% da viewport
-          scrub: 1.2,        // Suaviza a resposta da timeline com a rolagem
+          start: 'top 50%', // Inicia quando o topo da seção atinge 50% (meio) da viewport
+          toggleActions: 'play none none reverse',
         }
       });
 
@@ -71,11 +70,11 @@ export default function AppleMagicWords() {
       .to(word2Ref.current, { opacity: 1, y: 0, duration: 1.4, ease: 'power1.inOut' }, 0.8)
       .to(word3Ref.current, { y: 30, duration: 1.4, ease: 'power1.inOut' }, 0.8)
       
-      // De t=2.0 a t=3.2: as palavras se afastam no limite final, "Venda." acende e ganha gradiente
-      .to(word1Ref.current, { y: -65, duration: 1.4, ease: 'power1.inOut' }, 2.0)
-      .to(word2Ref.current, { y: 0, duration: 1.4, ease: 'power1.inOut' }, 2.0)
-      .to(word3Ref.current, { opacity: 1, y: 65, duration: 1.4, ease: 'power1.inOut' }, 2.0)
-      .to(magicalGradientRef.current, { opacity: 1, duration: 1.4, ease: 'power1.inOut' }, 2.0);
+      // De t=1.6 a t=2.6 (mais rápido e antecipado): as palavras se afastam no limite final, "Venda." acende e ganha gradiente
+      .to(word1Ref.current, { y: -65, duration: 1.0, ease: 'power1.inOut' }, 1.6)
+      .to(word2Ref.current, { y: 0, duration: 1.0, ease: 'power1.inOut' }, 1.6)
+      .to(word3Ref.current, { opacity: 1, y: 65, duration: 1.0, ease: 'power1.inOut' }, 1.6)
+      .to(magicalGradientRef.current, { opacity: 1, duration: 0.8, ease: 'power1.out' }, 1.8);
 
       // Efeito sutil de parallax e escala no mockup lateral atrelado ao scroll
       tl.to(imageRef.current, {
@@ -102,7 +101,7 @@ export default function AppleMagicWords() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-screen bg-gradient-to-b from-[#f5f5f7] via-[#fbfbfd] to-[#ffffff] overflow-hidden select-none flex items-center justify-center"
+      className="relative w-full h-screen bg-gradient-to-b from-bg-base via-white to-bg-base overflow-hidden select-none flex items-center justify-center"
       id="magic-words"
     >
       {/* Luz Radial Traseira para profundidade (Estilo Clean Apple) */}
@@ -128,12 +127,16 @@ export default function AppleMagicWords() {
           ref={textWrapperRef}
           className="relative flex items-center justify-center w-full h-[280px] sm:h-[360px] md:h-[440px] order-2 md:order-2 px-4 md:px-8"
         >
-          {/* Palavra de Introdução "Impulse" */}
+          {/* Logo de Introdução "Impulse" */}
           <div
             ref={titleRef}
-            className="absolute text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1d1d1f] tracking-tight text-center select-none will-change-transform"
+            className="absolute flex items-center justify-center w-[260px] sm:w-[320px] md:w-[400px] lg:w-[460px] px-4 select-none will-change-transform"
           >
-            IMPULSE
+            <img 
+              src="/assets/logo_atual.png" 
+              alt="Impulse" 
+              className="w-full h-auto object-contain" 
+            />
           </div>
 
           {/* Container das Palavras Mágicas */}
@@ -144,7 +147,7 @@ export default function AppleMagicWords() {
             {/* Palavra 1 */}
             <span
               ref={word1Ref}
-              className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1d1d1f] py-2 will-change-transform"
+              className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text-main py-2 will-change-transform"
             >
               IMPRESSIONE.
             </span>
@@ -152,7 +155,7 @@ export default function AppleMagicWords() {
             {/* Palavra 2 */}
             <span
               ref={word2Ref}
-              className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1d1d1f] py-2 will-change-transform"
+              className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text-main py-2 will-change-transform"
             >
               IMPULSIONE.
             </span>
@@ -160,7 +163,7 @@ export default function AppleMagicWords() {
             {/* Palavra 3 */}
             <div
               ref={word3Ref}
-              className="relative block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1d1d1f] py-2 will-change-transform"
+              className="relative block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-text-main py-2 will-change-transform"
             >
               {/* Camada cinza base */}
               <span>VENDA.</span>

@@ -82,7 +82,7 @@ export default function ImageSequenceCanvas() {
         context.fillRect(0, 0, canvas.width, canvas.height);
 
         // Linhas em perspectiva sutil (Azul/escuro transparente sobre fundo claro)
-        context.strokeStyle = `rgba(38, 91, 171, ${0.08 + progress * 0.15})`;
+        context.strokeStyle = `rgba(9, 13, 41, ${0.08 + progress * 0.15})`;
         context.lineWidth = 1;
         
         const centerX = canvas.width / 2;
@@ -182,7 +182,7 @@ export default function ImageSequenceCanvas() {
   return (
     <div 
       ref={containerRef} 
-      className="relative w-full min-h-screen bg-[#f5f5f7]"
+      className="relative w-full min-h-screen bg-bg-base"
     >
       {/* Canvas fixado que preenche toda a viewport */}
       <canvas 
@@ -193,10 +193,10 @@ export default function ImageSequenceCanvas() {
       {/* Elementos de conteúdo sobrepostos opcionais */}
       <div className="relative z-10 w-full min-h-screen pointer-events-none flex flex-col items-center justify-between py-24">
         <div></div>
-        <h2 className="text-zinc-900 text-5xl md:text-7xl font-bold tracking-tight opacity-30">
+        <h2 className="text-title text-5xl md:text-7xl font-bold tracking-tight opacity-30">
           Engenharia de Precisão
         </h2>
-        <p className="text-zinc-500 text-xs tracking-widest uppercase">
+        <p className="text-text-muted text-xs tracking-widest uppercase">
           Fim da demonstração do catálogo
         </p>
       </div>
