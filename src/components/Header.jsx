@@ -54,6 +54,7 @@ export default function Header() {
                   Início
                 </a>
               </li>
+              {/* Link de Catálogos ocultado temporariamente
               <li>
                 <a 
                   href="#showcase" 
@@ -66,6 +67,7 @@ export default function Header() {
                   Catálogos
                 </a>
               </li>
+              */}
             </ul>
           </nav>
 

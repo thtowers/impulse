@@ -7,7 +7,9 @@ export default function Footer() {
         <img src="/assets/logo_atual.png" alt="Impulse Logo" className="h-[40px] w-auto opacity-80" />
         <ul className="flex gap-6 text-text-muted text-xs font-medium">
           <li><a href="#magic-words" className="hover:text-text-main transition-colors">Início</a></li>
+          {/* Link de Catálogos ocultado temporariamente
           <li><a href="#showcase" className="hover:text-text-main transition-colors">Catálogos</a></li>
+          */}
         </ul>
         <p className="text-text-muted text-[10px] tracking-wide">
           &copy; 2026 Impulse Agência Digital. Todos os direitos reservados.
