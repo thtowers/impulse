@@ -55,7 +55,7 @@ const brandsData = {
     bottomBorder: 'border-zinc-200',
     products: [
       { name: 'Pizza Margherita Premium', price: 'R$ 49,90', img: '/assets/pizza.png', tag: 'Artesanal' },
-      { name: 'Calabresa Gourmet', price: 'R$ 54,90', img: '/assets/pizza.png', tag: 'Destaque' },
+      { name: 'Calabresa Gourmet', price: 'R$ 54,90', img: '/assets/calabresa_gourmet.png', tag: 'Destaque' },
       { name: 'Forno Napolitano (Modelo)', price: 'R$ 58,90', img: '/assets/forno_hero.png' }
     ]
   },
