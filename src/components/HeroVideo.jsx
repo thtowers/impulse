@@ -10,7 +10,7 @@ export default function HeroVideo() {
   };
 
   return (
-    <section 
+    <section
       className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-black"
       id="hero-video"
     >
@@ -34,7 +34,7 @@ export default function HeroVideo() {
 
       {/* 3. Conteúdo Centralizado */}
       <div className="relative z-20 text-center text-white px-6 max-w-4xl flex flex-col items-center gap-6 md:gap-8">
-        
+
         {/* Tag Premium no topo do Hero */}
         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-[11px] font-semibold tracking-widest text-blue-400 uppercase">
           🚀 Agência Impulse Digital
@@ -44,7 +44,7 @@ export default function HeroVideo() {
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tighter leading-none text-white drop-shadow-sm">
           Sua Marca com Presença Digital <br className="hidden md:inline" />
           <span className="bg-gradient-to-r from-[#00c6ff] via-[#0072ff] to-[#a259ff] bg-clip-text text-transparent">
-            Ultra-Premium
+            Premium
           </span>
         </h1>
 
@@ -61,9 +61,9 @@ export default function HeroVideo() {
             rel="noopener noreferrer"
             className="w-full sm:w-auto bg-tertiary hover:bg-tertiary-hover text-white font-medium text-sm px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] shadow-[0_4px_20px_rgba(0,113,227,0.35)]"
           >
-            Quero meu Projeto Premium
+            Quero meu Projeto
           </a>
-          
+
           <a
             href="#magic-words"
             onClick={handleScrollToNext}

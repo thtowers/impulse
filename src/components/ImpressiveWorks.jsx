@@ -162,13 +162,13 @@ export default function ImpressiveWorks() {
     // Animação autônoma para Mobile/Tablets (< 1024px)
     mm.add("(max-width: 1024px)", () => {
       const brands = ['auria', 'forno', 'vega'];
-      
+
       brands.forEach((key) => {
         const tlFloating = gsap.timeline({
           repeat: -1,
           scrollTrigger: {
             trigger: `#mockup-container-${key}`,
-            start: 'top 30%', 
+            start: 'top 30%',
             end: 'bottom 0%',
             toggleActions: 'play pause resume pause',
           }
@@ -179,7 +179,7 @@ export default function ImpressiveWorks() {
           .to(`#hero-${key}`, { x: 12, y: 6, z: 30, duration: 3.5, ease: 'sine.inOut' }, 0)
           .to(`#products-${key}`, { x: -8, y: -4, z: 50, duration: 3.5, ease: 'sine.inOut' }, 0)
           .to(`#glint-${key}`, { opacity: 0.15, background: 'radial-gradient(circle 250px at 80% 20%, rgba(255,255,255,0.08), transparent 80%)', duration: 3.5, ease: 'sine.inOut' }, 0)
-          
+
           .to(`#mockup-container-${key}`, { rotationY: -5, rotationX: -3, scale: 0.985, transformPerspective: 1200, duration: 4.2, ease: 'sine.inOut' }, 3.5)
           .to(`#hero-${key}`, { x: -12, y: -6, z: -10, duration: 4.2, ease: 'sine.inOut' }, 3.5)
           .to(`#products-${key}`, { x: 8, y: 4, z: -20, duration: 4.2, ease: 'sine.inOut' }, 3.5)
@@ -208,7 +208,7 @@ export default function ImpressiveWorks() {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    
+
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
     const rotateX = ((centerY - y) / centerY) * 7; // máx 7 graus
@@ -341,95 +341,95 @@ export default function ImpressiveWorks() {
               >
                 {/* Glint Reflector */}
                 <div id="glint-auria" className="absolute inset-0 pointer-events-none rounded-3xl z-30 opacity-0 transition-opacity duration-300" />
-              
-              <div className="flex flex-col h-full bg-[#160d0a] border border-white/10 rounded-3xl overflow-hidden">
-                {/* Browser Top Bar */}
-                <div className="h-9 border-b flex items-center px-4 gap-1.5 shrink-0 bg-[#160d0a] border-white/5">
-                  <div className="w-2 h-2 rounded-full bg-[#ff5f56]" />
-                  <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
-                  <div className="w-2 h-2 rounded-full bg-[#27c93f]" />
-                  <div className="mx-auto text-[8px] sm:text-[9px] text-zinc-500 font-medium tracking-wide px-5 py-0.5 rounded border border-white/5 bg-[#221511]">
-                    aurialuxury.store
-                  </div>
-                </div>
 
-                {/* Content */}
-                <div className="relative w-full flex-grow flex flex-col overflow-hidden bg-[#1e130f]">
-                  {/* Header */}
-                  <div className="relative z-30 bg-[#160d0a] border-b border-white/5 py-2 px-4 flex justify-between items-center text-[#e8dcd0]">
-                    <span className="font-serif text-[10px] md:text-xs font-bold uppercase">Auria</span>
-                    <ul className="hidden xl:flex gap-4 text-[7px] font-bold tracking-wider opacity-90">
-                      {brandsData.auria.headerLinks.map(link => <li key={link} className="hover:opacity-75 cursor-pointer">{link}</li>)}
-                    </ul>
-                    <div className="flex gap-2 text-[7px] font-bold">
-                      {brandsData.auria.headerButtons.map((btn) => <span key={btn} className="cursor-pointer hover:opacity-85">{btn}</span>)}
+                <div className="flex flex-col h-full bg-[#160d0a] border border-white/10 rounded-3xl overflow-hidden">
+                  {/* Browser Top Bar */}
+                  <div className="h-9 border-b flex items-center px-4 gap-1.5 shrink-0 bg-[#160d0a] border-white/5">
+                    <div className="w-2 h-2 rounded-full bg-[#ff5f56]" />
+                    <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+                    <div className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                    <div className="mx-auto text-[8px] sm:text-[9px] text-zinc-500 font-medium tracking-wide px-5 py-0.5 rounded border border-white/5 bg-[#221511]">
+                      aurialuxury.store
                     </div>
                   </div>
 
-                  {/* Hero Image e Camada do Parallax */}
-                  <div id="hero-auria" className="relative w-full flex-grow overflow-hidden flex items-center bg-[#1e130f]">
-                    <div className="absolute inset-y-0 right-0 w-1/2 sm:w-[55%] h-full">
-                      <img
-                        src={brandsData.auria.heroImg}
-                        alt="Auria Luxury"
-                        className="w-full h-full object-cover object-[center_18%] brightness-[0.85]"
-                      />
-                      <div className="absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#1e130f] to-transparent z-10" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1e130f] via-[#1e130f]/40 to-transparent pointer-events-none z-10" />
-
-                    <div className="relative z-20 p-5 text-white max-w-[180px] sm:max-w-[220px]">
-                      <h2 className="text-xs sm:text-sm md:text-base font-light tracking-tight leading-tight mb-1 uppercase font-serif">
-                        {brandsData.auria.heroTitle}
-                      </h2>
-                      <p className="text-[7px] sm:text-[8px] font-normal leading-relaxed mb-3 opacity-95 text-[#cfa890]">
-                        {brandsData.auria.heroSubtitle}
-                      </p>
-                      <button className="text-[7px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border bg-[#2c1b15] border-[#3e271e] text-[#e8dcd0]">
-                        {brandsData.auria.heroBtnText}
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Products Grid Parallax */}
-                  <div id="products-auria" className="relative z-20 bg-white p-5 text-zinc-900 border-t border-zinc-100 rounded-b-3xl">
-                    <div className="flex justify-between items-center mb-3">
-                      <h3 className="font-serif text-[8px] md:text-[9px] font-bold tracking-wider uppercase text-zinc-800">Em Destaque</h3>
-                      <div className="flex gap-1">
-                        <button className="w-4 h-4 border border-zinc-200 rounded-full flex items-center justify-center text-[7px] hover:bg-zinc-50 select-none">&lt;</button>
-                        <button className="w-4 h-4 border border-zinc-200 rounded-full flex items-center justify-center text-[7px] hover:bg-zinc-50 select-none">&gt;</button>
+                  {/* Content */}
+                  <div className="relative w-full flex-grow flex flex-col overflow-hidden bg-[#1e130f]">
+                    {/* Header */}
+                    <div className="relative z-30 bg-[#160d0a] border-b border-white/5 py-2 px-4 flex justify-between items-center text-[#e8dcd0]">
+                      <span className="font-serif text-[10px] md:text-xs font-bold uppercase">Auria</span>
+                      <ul className="hidden xl:flex gap-4 text-[7px] font-bold tracking-wider opacity-90">
+                        {brandsData.auria.headerLinks.map(link => <li key={link} className="hover:opacity-75 cursor-pointer">{link}</li>)}
+                      </ul>
+                      <div className="flex gap-2 text-[7px] font-bold">
+                        {brandsData.auria.headerButtons.map((btn) => <span key={btn} className="cursor-pointer hover:opacity-85">{btn}</span>)}
                       </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-2">
-                      {brandsData.auria.products.map((prod, idx) => (
-                        <div key={idx} className="flex flex-col group cursor-pointer">
-                          <div className="aspect-[4/5] w-full rounded-lg bg-zinc-50 border border-zinc-100 overflow-hidden mb-1 relative">
-                            <img src={prod.img} alt={prod.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                            {prod.tag && (
-                              <span className="absolute top-1 left-1 text-[5px] font-extrabold uppercase tracking-widest px-1 py-0.5 rounded bg-zinc-900 text-white scale-90">
-                                {prod.tag}
-                              </span>
-                            )}
-                          </div>
-                          <span className="text-[6px] font-bold uppercase tracking-wide text-zinc-400">{prod.price}</span>
-                          <span className="text-[7px] sm:text-[8px] font-bold truncate mt-0.5 text-zinc-900">{prod.name}</span>
+
+                    {/* Hero Image e Camada do Parallax */}
+                    <div id="hero-auria" className="relative w-full flex-grow overflow-hidden flex items-center bg-[#1e130f]">
+                      <div className="absolute inset-y-0 right-0 w-1/2 sm:w-[55%] h-full">
+                        <img
+                          src={brandsData.auria.heroImg}
+                          alt="Auria Luxury"
+                          className="w-full h-full object-cover object-[center_18%] brightness-[0.85]"
+                        />
+                        <div className="absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#1e130f] to-transparent z-10" />
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-[#1e130f] via-[#1e130f]/40 to-transparent pointer-events-none z-10" />
+
+                      <div className="relative z-20 p-5 text-white max-w-[180px] sm:max-w-[220px]">
+                        <h2 className="text-xs sm:text-sm md:text-base font-light tracking-tight leading-tight mb-1 uppercase font-serif">
+                          {brandsData.auria.heroTitle}
+                        </h2>
+                        <p className="text-[7px] sm:text-[8px] font-normal leading-relaxed mb-3 opacity-95 text-[#cfa890]">
+                          {brandsData.auria.heroSubtitle}
+                        </p>
+                        <button className="text-[7px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border bg-[#2c1b15] border-[#3e271e] text-[#e8dcd0]">
+                          {brandsData.auria.heroBtnText}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Products Grid Parallax */}
+                    <div id="products-auria" className="relative z-20 bg-white p-5 text-zinc-900 border-t border-zinc-100 rounded-b-3xl">
+                      <div className="flex justify-between items-center mb-3">
+                        <h3 className="font-serif text-[8px] md:text-[9px] font-bold tracking-wider uppercase text-zinc-800">Em Destaque</h3>
+                        <div className="flex gap-1">
+                          <button className="w-4 h-4 border border-zinc-200 rounded-full flex items-center justify-center text-[7px] hover:bg-zinc-50 select-none">&lt;</button>
+                          <button className="w-4 h-4 border border-zinc-200 rounded-full flex items-center justify-center text-[7px] hover:bg-zinc-50 select-none">&gt;</button>
                         </div>
-                      ))}
+                      </div>
+                      <div className="grid grid-cols-3 gap-2">
+                        {brandsData.auria.products.map((prod, idx) => (
+                          <div key={idx} className="flex flex-col group cursor-pointer">
+                            <div className="aspect-[4/5] w-full rounded-lg bg-zinc-50 border border-zinc-100 overflow-hidden mb-1 relative">
+                              <img src={prod.img} alt={prod.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                              {prod.tag && (
+                                <span className="absolute top-1 left-1 text-[5px] font-extrabold uppercase tracking-widest px-1 py-0.5 rounded bg-zinc-900 text-white scale-90">
+                                  {prod.tag}
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-[6px] font-bold uppercase tracking-wide text-zinc-400">{prod.price}</span>
+                            <span className="text-[7px] sm:text-[8px] font-bold truncate mt-0.5 text-zinc-900">{prod.name}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
             </div>
 
             {/* Lado Direito: Texto com revelação e estilo escuro */}
             <div id="text-container-auria" className="lg:col-span-5 flex flex-col justify-center space-y-4">
               <span className="font-semibold text-xs tracking-widest text-[#0071e3] uppercase block font-mono">✦ Experiência Tridimensional</span>
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                Seu produto ganha vida na tela com <span className="bg-gradient-to-r from-[#0071e3] to-purple-400 bg-clip-text text-transparent">profundidade física</span>.
+                Criamos sites que <span className="bg-gradient-to-r from-[#0071e3] to-purple-400 bg-clip-text text-transparent">ganham vida</span>.
               </h3>
               <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-                Nossos mockups reagem ao toque e ao movimento do cursor. As imagens flutuam suavemente com efeito parallax e 3D tilt, criando uma experiência imersiva de toque real que envolve o cliente.
+                Desenvolvemos sites com animações onde as imagens flutuam suavemente com efeito parallax e 3D tilt, criando uma experiência imersiva de toque real que envolve o seu cliente.
               </p>
             </div>
           </div>
@@ -449,91 +449,91 @@ export default function ImpressiveWorks() {
               >
                 {/* Glint Reflector */}
                 <div id="glint-forno" className="absolute inset-0 pointer-events-none rounded-3xl z-30 opacity-0 transition-opacity duration-300" />
-              
-              <div className="flex flex-col h-full bg-[#efefef] border border-white/10 rounded-3xl overflow-hidden">
-                {/* Browser Top Bar */}
-                <div className="h-9 border-b flex items-center px-4 gap-1.5 shrink-0 bg-[#efefef] border-zinc-200">
-                  <div className="w-2 h-2 rounded-full bg-[#ff5f56]" />
-                  <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
-                  <div className="w-2 h-2 rounded-full bg-[#27c93f]" />
-                  <div className="mx-auto text-[8px] sm:text-[9px] text-zinc-400 font-medium tracking-wide px-5 py-0.5 rounded border border-zinc-200 bg-white">
-                    fornonapolitano.store
-                  </div>
-                </div>
 
-                {/* Content */}
-                <div className="relative w-full flex-grow flex flex-col overflow-hidden bg-[#0a0503]">
-                  {/* Header */}
-                  <div className="relative z-30 bg-white border-b border-zinc-200 py-2 px-4 flex justify-between items-center text-[#1d1d1f]">
-                    <span className="font-sans font-black tracking-tighter text-[10px] md:text-xs uppercase flex items-center gap-1">
-                      <span className="text-[#ef4444] font-bold mr-0.5">🔥</span>FORNO
-                    </span>
-                    <ul className="hidden xl:flex gap-4 text-[7px] font-bold tracking-wider opacity-90">
-                      {brandsData.forno.headerLinks.map(link => <li key={link} className="hover:opacity-75 cursor-pointer">{link}</li>)}
-                    </ul>
-                    <div className="flex gap-2 text-[7px] font-bold">
-                      {brandsData.forno.headerButtons.map((btn) => (
-                        <span key={btn} className="bg-[#ef4444] text-white px-2 py-0.5 rounded font-bold">{btn}</span>
-                      ))}
+                <div className="flex flex-col h-full bg-[#efefef] border border-white/10 rounded-3xl overflow-hidden">
+                  {/* Browser Top Bar */}
+                  <div className="h-9 border-b flex items-center px-4 gap-1.5 shrink-0 bg-[#efefef] border-zinc-200">
+                    <div className="w-2 h-2 rounded-full bg-[#ff5f56]" />
+                    <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+                    <div className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                    <div className="mx-auto text-[8px] sm:text-[9px] text-zinc-400 font-medium tracking-wide px-5 py-0.5 rounded border border-zinc-200 bg-white">
+                      fornonapolitano.store
                     </div>
                   </div>
 
-                  {/* Hero Parallax */}
-                  <div id="hero-forno" className="relative w-full flex-grow overflow-hidden flex items-center bg-black">
-                    <img src={brandsData.forno.heroImg} alt="Forno Napolitano" className="absolute inset-0 w-full h-full object-cover brightness-[0.85]" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#0a0503]/70 via-[#0a0503]/25 to-transparent" />
-                    <div className="relative z-10 p-5 text-white max-w-[200px] sm:max-w-[240px]">
-                      <h2 className="text-xs sm:text-sm md:text-base font-black tracking-tight leading-tight mb-1 uppercase font-sans">
-                        {brandsData.forno.heroTitle}
-                      </h2>
-                      <p className="text-[7px] sm:text-[8px] font-normal leading-relaxed mb-3 opacity-90 text-zinc-200">
-                        {brandsData.forno.heroSubtitle}
-                      </p>
-                      <button className="text-[7px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border bg-[#ef4444] border-transparent text-white">
-                        {brandsData.forno.heroBtnText}
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Products Grid Parallax */}
-                  <div id="products-forno" className="relative z-20 bg-[#fbfbfd] p-5 text-[#1d1d1f] border-t border-zinc-200 rounded-b-3xl">
-                    <div className="flex justify-between items-center mb-3">
-                      <h3 className="font-serif text-[8px] md:text-[9px] font-bold tracking-wider uppercase">Menu Destaques</h3>
-                      <div className="flex gap-1">
-                        <button className="w-4 h-4 border border-zinc-200 rounded-full flex items-center justify-center text-[7px] hover:bg-zinc-50 select-none">&lt;</button>
-                        <button className="w-4 h-4 border border-zinc-200 rounded-full flex items-center justify-center text-[7px] hover:bg-zinc-50 select-none">&gt;</button>
+                  {/* Content */}
+                  <div className="relative w-full flex-grow flex flex-col overflow-hidden bg-[#0a0503]">
+                    {/* Header */}
+                    <div className="relative z-30 bg-white border-b border-zinc-200 py-2 px-4 flex justify-between items-center text-[#1d1d1f]">
+                      <span className="font-sans font-black tracking-tighter text-[10px] md:text-xs uppercase flex items-center gap-1">
+                        <span className="text-[#ef4444] font-bold mr-0.5">🔥</span>FORNO
+                      </span>
+                      <ul className="hidden xl:flex gap-4 text-[7px] font-bold tracking-wider opacity-90">
+                        {brandsData.forno.headerLinks.map(link => <li key={link} className="hover:opacity-75 cursor-pointer">{link}</li>)}
+                      </ul>
+                      <div className="flex gap-2 text-[7px] font-bold">
+                        {brandsData.forno.headerButtons.map((btn) => (
+                          <span key={btn} className="bg-[#ef4444] text-white px-2 py-0.5 rounded font-bold">{btn}</span>
+                        ))}
                       </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-2">
-                      {brandsData.forno.products.map((prod, idx) => (
-                        <div key={idx} className="flex flex-col group cursor-pointer">
-                          <div className="aspect-[4/5] w-full rounded-lg bg-zinc-50 border border-zinc-100 overflow-hidden mb-1 relative">
-                            <img src={prod.img} alt={prod.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                            {prod.tag && (
-                              <span className="absolute top-1 left-1 text-[5px] font-extrabold uppercase tracking-widest px-1 py-0.5 rounded bg-zinc-900 text-white scale-90">
-                                {prod.tag}
-                              </span>
-                            )}
-                          </div>
-                          <span className="text-[6px] font-bold uppercase tracking-wide text-zinc-400">{prod.price}</span>
-                          <span className="text-[7px] sm:text-[8px] font-bold truncate mt-0.5 text-[#1d1d1f]">{prod.name}</span>
+
+                    {/* Hero Parallax */}
+                    <div id="hero-forno" className="relative w-full flex-grow overflow-hidden flex items-center bg-black">
+                      <img src={brandsData.forno.heroImg} alt="Forno Napolitano" className="absolute inset-0 w-full h-full object-cover brightness-[0.85]" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0503]/70 via-[#0a0503]/25 to-transparent" />
+                      <div className="relative z-10 p-5 text-white max-w-[200px] sm:max-w-[240px]">
+                        <h2 className="text-xs sm:text-sm md:text-base font-black tracking-tight leading-tight mb-1 uppercase font-sans">
+                          {brandsData.forno.heroTitle}
+                        </h2>
+                        <p className="text-[7px] sm:text-[8px] font-normal leading-relaxed mb-3 opacity-90 text-zinc-200">
+                          {brandsData.forno.heroSubtitle}
+                        </p>
+                        <button className="text-[7px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border bg-[#ef4444] border-transparent text-white">
+                          {brandsData.forno.heroBtnText}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Products Grid Parallax */}
+                    <div id="products-forno" className="relative z-20 bg-[#fbfbfd] p-5 text-[#1d1d1f] border-t border-zinc-200 rounded-b-3xl">
+                      <div className="flex justify-between items-center mb-3">
+                        <h3 className="font-serif text-[8px] md:text-[9px] font-bold tracking-wider uppercase">Menu Destaques</h3>
+                        <div className="flex gap-1">
+                          <button className="w-4 h-4 border border-zinc-200 rounded-full flex items-center justify-center text-[7px] hover:bg-zinc-50 select-none">&lt;</button>
+                          <button className="w-4 h-4 border border-zinc-200 rounded-full flex items-center justify-center text-[7px] hover:bg-zinc-50 select-none">&gt;</button>
                         </div>
-                      ))}
+                      </div>
+                      <div className="grid grid-cols-3 gap-2">
+                        {brandsData.forno.products.map((prod, idx) => (
+                          <div key={idx} className="flex flex-col group cursor-pointer">
+                            <div className="aspect-[4/5] w-full rounded-lg bg-zinc-50 border border-zinc-100 overflow-hidden mb-1 relative">
+                              <img src={prod.img} alt={prod.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                              {prod.tag && (
+                                <span className="absolute top-1 left-1 text-[5px] font-extrabold uppercase tracking-widest px-1 py-0.5 rounded bg-zinc-900 text-white scale-90">
+                                  {prod.tag}
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-[6px] font-bold uppercase tracking-wide text-zinc-400">{prod.price}</span>
+                            <span className="text-[7px] sm:text-[8px] font-bold truncate mt-0.5 text-[#1d1d1f]">{prod.name}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
             </div>
 
             {/* Lado Direito: Texto com revelação (Na esquerda em Desktop) */}
             <div id="text-container-forno" className="lg:col-span-5 flex flex-col justify-center order-last lg:order-first space-y-4">
               <span className="font-semibold text-xs tracking-widest text-[#0071e3] uppercase block font-mono">✦ Desejo e Interação</span>
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                Movimentos que despertam o <span className="bg-gradient-to-r from-[#0071e3] to-purple-400 bg-clip-text text-transparent">desejo do cliente</span>.
+                Imagens que despertam o <span className="bg-gradient-to-r from-[#0071e3] to-purple-400 bg-clip-text text-transparent">desejo do cliente</span>.
               </h3>
               <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-                As animações em paralaxe guiam os olhos do usuário para os produtos principais, simulando profundidade e acelerando a velocidade de renderização direto na GPU. Seus clientes vão devorar as fotos.
+                A combinação perfeita de imagens irresistíveis com animações imersivas. O visual ganha tanta profundidade e destaque que seus clientes vão literalmente devorar as fotos com os olhos.
               </p>
             </div>
           </div>
@@ -553,54 +553,54 @@ export default function ImpressiveWorks() {
               >
                 {/* Glint Reflector */}
                 <div id="glint-vega" className="absolute inset-0 pointer-events-none rounded-3xl z-30 opacity-0 transition-opacity duration-300" />
-              
-              <div className="flex flex-col h-full bg-[#f3f4f6] border border-white/10 rounded-3xl overflow-hidden">
-                {/* Browser Top Bar */}
-                <div className="h-9 border-b flex items-center px-4 gap-1.5 shrink-0 bg-[#f3f4f6] border-[#e5e7eb]">
-                  <div className="w-2 h-2 rounded-full bg-[#ff5f56]" />
-                  <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
-                  <div className="w-2 h-2 rounded-full bg-[#27c93f]" />
-                  <div className="mx-auto text-[8px] sm:text-[9px] text-zinc-400 font-medium tracking-wide px-5 py-0.5 rounded border border-white/5 bg-white">
-                    vegashoes.com
-                  </div>
-                </div>
 
-                {/* Content */}
-                <div className="relative w-full flex-grow flex flex-col overflow-hidden bg-white">
-                  {/* Hero Parallax */}
-                  <div id="hero-vega" className="relative w-full flex-grow overflow-hidden flex items-center bg-[#f5f5f0]">
-                    <img
-                      src="/assets/vega_hero.png"
-                      alt="Vega Shoes Hero"
-                      className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.92]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/60 via-[#1a1a1a]/10 to-transparent pointer-events-none z-10" />
-                    
-                    <div className="relative z-20 p-5 text-white max-w-[200px] sm:max-w-[230px]">
-                      <p className="text-[7px] sm:text-[8px] font-bold tracking-widest uppercase mb-1 opacity-70">Nova Coleção</p>
-                      <h2 className="text-xs sm:text-sm md:text-base font-black tracking-tight leading-tight mb-2 uppercase text-white">
-                        {brandsData.vega.heroTitle}
-                      </h2>
-                      <p className="text-[7px] sm:text-[8px] font-normal leading-relaxed mb-3 opacity-90 text-zinc-300">
-                        {brandsData.vega.heroSubtitle}
-                      </p>
-                      <button className="text-[7px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border bg-white border-transparent text-zinc-900">
-                        {brandsData.vega.heroBtnText}
-                      </button>
+                <div className="flex flex-col h-full bg-[#f3f4f6] border border-white/10 rounded-3xl overflow-hidden">
+                  {/* Browser Top Bar */}
+                  <div className="h-9 border-b flex items-center px-4 gap-1.5 shrink-0 bg-[#f3f4f6] border-[#e5e7eb]">
+                    <div className="w-2 h-2 rounded-full bg-[#ff5f56]" />
+                    <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+                    <div className="w-2 h-2 rounded-full bg-[#27c93f]" />
+                    <div className="mx-auto text-[8px] sm:text-[9px] text-zinc-400 font-medium tracking-wide px-5 py-0.5 rounded border border-white/5 bg-white">
+                      vegashoes.com
                     </div>
                   </div>
 
-                  {/* Products/Bottom Parallax */}
-                  <div id="products-vega" className="relative z-20 bg-white border-t border-zinc-100 rounded-b-3xl overflow-hidden shrink-0 h-[130px] sm:h-[170px]">
-                    <img
-                      src="/assets/veja_2.png"
-                      alt="Vega Shoes Destaques"
-                      className="w-full h-full object-cover object-top"
-                    />
+                  {/* Content */}
+                  <div className="relative w-full flex-grow flex flex-col overflow-hidden bg-white">
+                    {/* Hero Parallax */}
+                    <div id="hero-vega" className="relative w-full flex-grow overflow-hidden flex items-center bg-[#f5f5f0]">
+                      <img
+                        src="/assets/vega_hero.png"
+                        alt="Vega Shoes Hero"
+                        className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.92]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/60 via-[#1a1a1a]/10 to-transparent pointer-events-none z-10" />
+
+                      <div className="relative z-20 p-5 text-white max-w-[200px] sm:max-w-[230px]">
+                        <p className="text-[7px] sm:text-[8px] font-bold tracking-widest uppercase mb-1 opacity-70">Nova Coleção</p>
+                        <h2 className="text-xs sm:text-sm md:text-base font-black tracking-tight leading-tight mb-2 uppercase text-white">
+                          {brandsData.vega.heroTitle}
+                        </h2>
+                        <p className="text-[7px] sm:text-[8px] font-normal leading-relaxed mb-3 opacity-90 text-zinc-300">
+                          {brandsData.vega.heroSubtitle}
+                        </p>
+                        <button className="text-[7px] font-bold tracking-widest uppercase px-3 py-1 rounded-full border bg-white border-transparent text-zinc-900">
+                          {brandsData.vega.heroBtnText}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Products/Bottom Parallax */}
+                    <div id="products-vega" className="relative z-20 bg-white border-t border-zinc-100 rounded-b-3xl overflow-hidden shrink-0 h-[130px] sm:h-[170px]">
+                      <img
+                        src="/assets/veja_2.png"
+                        alt="Vega Shoes Destaques"
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </div>
 
             {/* Lado Direito: Texto com estilo escuro */}
