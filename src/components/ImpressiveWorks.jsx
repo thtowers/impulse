@@ -334,6 +334,9 @@ export default function ImpressiveWorks() {
               onMouseMove={(e) => handleMouseMove(e, 'mockup-container-auria', 'hero-auria', 'products-auria', 'glint-auria')}
               onMouseLeave={() => handleMouseLeave('mockup-container-auria', 'hero-auria', 'products-auria', 'glint-auria')}
             >
+              {/* Glow branco no mobile para destacar o mockup do fundo escuro e realçar o 3D */}
+              <div className="absolute inset-8 sm:inset-16 bg-white/30 blur-[80px] lg:hidden rounded-[100px] pointer-events-none z-0" />
+
               <div
                 id="mockup-container-auria"
                 className="w-full h-full relative rounded-3xl overflow-hidden"
@@ -442,6 +445,9 @@ export default function ImpressiveWorks() {
               onMouseMove={(e) => handleMouseMove(e, 'mockup-container-forno', 'hero-forno', 'products-forno', 'glint-forno')}
               onMouseLeave={() => handleMouseLeave('mockup-container-forno', 'hero-forno', 'products-forno', 'glint-forno')}
             >
+              {/* Glow branco no mobile para destacar o mockup do fundo escuro e realçar o 3D */}
+              <div className="absolute inset-8 sm:inset-16 bg-white/30 blur-[80px] lg:hidden rounded-[100px] pointer-events-none z-0" />
+
               <div
                 id="mockup-container-forno"
                 className="w-full h-full relative rounded-3xl overflow-hidden"
@@ -546,6 +552,9 @@ export default function ImpressiveWorks() {
               onMouseMove={(e) => handleMouseMove(e, 'mockup-container-vega', 'hero-vega', 'products-vega', 'glint-vega')}
               onMouseLeave={() => handleMouseLeave('mockup-container-vega', 'hero-vega', 'products-vega', 'glint-vega')}
             >
+              {/* Glow branco no mobile para destacar o mockup do fundo escuro e realçar o 3D */}
+              <div className="absolute inset-8 sm:inset-16 bg-white/30 blur-[80px] lg:hidden rounded-[100px] pointer-events-none z-0" />
+
               <div
                 id="mockup-container-vega"
                 className="w-full h-full relative rounded-3xl overflow-hidden"
