@@ -37,7 +37,7 @@ export default function HeroVideo() {
 
         {/* Tag Premium no topo do Hero */}
         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-[11px] font-semibold tracking-widest text-blue-400 uppercase">
-          🚀 Agência Impulse Digital
+          🚀 Impulse Digital
         </span>
 
         {/* Título de Alto Impacto */}
