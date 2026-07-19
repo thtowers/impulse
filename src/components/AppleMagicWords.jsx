@@ -66,14 +66,14 @@ export default function AppleMagicWords() {
       }, 0.8)
 
       // De t=0.8 a t=2.0: as palavras começam a se afastar e "Impulsione." acende
-      .to(word1Ref.current, { y: -30, duration: 1.4, ease: 'power1.inOut' }, 0.8)
+      .to(word1Ref.current, { y: -20, duration: 1.4, ease: 'power1.inOut' }, 0.8)
       .to(word2Ref.current, { opacity: 1, y: 0, duration: 1.4, ease: 'power1.inOut' }, 0.8)
-      .to(word3Ref.current, { y: 30, duration: 1.4, ease: 'power1.inOut' }, 0.8)
+      .to(word3Ref.current, { y: 20, duration: 1.4, ease: 'power1.inOut' }, 0.8)
       
       // De t=1.6 a t=2.6 (mais rápido e antecipado): as palavras se afastam no limite final, "Venda." acende e ganha gradiente
-      .to(word1Ref.current, { y: -65, duration: 1.0, ease: 'power1.inOut' }, 1.6)
+      .to(word1Ref.current, { y: -40, duration: 1.0, ease: 'power1.inOut' }, 1.6)
       .to(word2Ref.current, { y: 0, duration: 1.0, ease: 'power1.inOut' }, 1.6)
-      .to(word3Ref.current, { opacity: 1, y: 65, duration: 1.0, ease: 'power1.inOut' }, 1.6)
+      .to(word3Ref.current, { opacity: 1, y: 40, duration: 1.0, ease: 'power1.inOut' }, 1.6)
       .to(magicalGradientRef.current, { opacity: 1, duration: 0.8, ease: 'power1.out' }, 1.8);
 
       // Efeito sutil de parallax e escala no mockup lateral atrelado ao scroll
