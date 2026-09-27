@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "622faba57f288148",
+        "id": "fbc0edb34f160bde",
         "type": "tabs",
         "children": [
           {
-            "id": "45fb9bcf990e7d7c",
+            "id": "e6fce3481de39b83",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "audio_cliente.md",
+                "file": "Risco de segurança.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "audio_cliente"
+              "title": "Risco de segurança"
             }
           }
         ]
@@ -31,9 +31,26 @@
     "type": "split",
     "children": [
       {
-        "id": "34e7625df2232375",
+        "id": "655db9f93938dbae",
         "type": "tabs",
         "children": [
+          {
+            "id": "0754d8edc05d30bb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "thiag",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "byModifiedTime"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
           {
             "id": "d4921e3816dc4966",
             "type": "leaf",
@@ -41,40 +58,29 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de arquivos"
             }
           },
           {
-            "id": "0754d8edc05d30bb",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "Procurar"
-            }
-          },
-          {
-            "id": "da940e9adf9afbff",
+            "id": "6246c1a3c6fe0dee",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-bookmark",
               "title": "Marcadores"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -183,11 +189,34 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "d4921e3816dc4966",
+  "active": "e6fce3481de39b83",
   "lastOpenFiles": [
+    "Reunião com o Sindicato.md",
+    "Sem título.md",
+    "Risco de segurança.md",
+    "PREVISÃO DE CUSTOS.md",
+    "Token melhor envio Rose Acessorios.md",
+    "Sem título 3.md",
+    "resposta de implementação.md",
+    "regra de negócio e de direitos estatutários de voto.md",
+    "README.md",
+    "Projeto de organização — Viagem de Pregação Iguatu → Pombal.md",
+    "Procurar.md",
+    "Perguntas e respostas — Funcionalidades implementadas.md",
+    "Ouvidoria  Mensagens.md",
+    "Orçamento pedido.md",
+    "Mudanças feita na semana.md",
+    "login ou duas senhas diferentes.md",
+    "Guia de Acesso, Segurança e Operação da Plataforma SINPRF-MG.md",
+    "duvidas de votação.md",
+    "Despesas por dia.md",
+    "Designação para Sentinela da Assembleia.md",
+    "Como enviar pelo WhatsApp do Sindicato.md",
+    "Cliente OAuth criado Google Drive.md",
     "audio_cliente.md",
-    "rincipais modelos e recursos de animação.md",
-    "Princípios e Abordagens de Design.md",
-    "Princípios de design.md"
+    "Sem título 2.md",
+    "Seu Pai, que observa em secreto, o recompensará.md",
+    "Sem título 1.md",
+    "Sem título.base"
   ]
 }
