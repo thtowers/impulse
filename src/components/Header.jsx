@@ -40,8 +40,8 @@ export default function Header() {
 
         {/* Lado Direito: Links e CTA estilo Apple local nav */}
         <div className="flex items-center gap-6">
-          <nav aria-label="Navegação local" className="hidden sm:block">
-            <ul className="flex items-center gap-6 text-[12px] font-normal tracking-tight transition-colors duration-300 text-text-muted">
+          <nav aria-label="Navegação local" className="hidden lg:block">
+            <ul className="flex items-center gap-5 text-[12px] font-medium tracking-tight transition-colors duration-300 text-text-muted">
               <li>
                 <a 
                   href="#hero-video" 
@@ -54,30 +54,54 @@ export default function Header() {
                   Início
                 </a>
               </li>
-              {/* Link de Catálogos ocultado temporariamente
               <li>
                 <a 
-                  href="#showcase" 
+                  href="#para-quem" 
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById('showcase')?.scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('para-quem')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                   className="transition-colors duration-300 hover:text-text-main"
                 >
-                  Catálogos
+                  Para Quem
                 </a>
               </li>
-              */}
+              <li>
+                <a 
+                  href="#metodologia" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('metodologia')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="transition-colors duration-300 hover:text-text-main"
+                >
+                  Processo
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#diferenciais" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('diferenciais')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="transition-colors duration-300 hover:text-text-main"
+                >
+                  Diferenciais
+                </a>
+              </li>
             </ul>
           </nav>
 
           <a 
-            href="https://wa.me/5521979362517?text=Olá, gostaria de solicitar um orçamento para criação do meu site ou catálogo!" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-tertiary hover:bg-tertiary-hover text-white text-[12px] font-normal px-3 py-1 rounded-full transition-all duration-200"
+            href="#contato"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="bg-tertiary hover:bg-tertiary-hover text-white text-[12px] font-semibold px-4 py-1.5 rounded-full transition-all duration-200 shadow-2xs hover:shadow-xs hover:scale-105 active:scale-95"
           >
-            Falar com Agência
+            Solicitar Orçamento
           </a>
         </div>
       </div>

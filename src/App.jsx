@@ -2,8 +2,10 @@ import React from 'react';
 import Header from './components/Header';
 import HeroVideo from './components/HeroVideo';
 import AppleMagicWords from './components/AppleMagicWords';
+import TargetAudience from './components/TargetAudience';
+import AgileProcess from './components/AgileProcess';
 import ImpressiveWorks from './components/ImpressiveWorks';
-import Showcase from './components/Showcase';
+import TangibleDeliveries from './components/TangibleDeliveries';
 import ContactCTA from './components/ContactCTA';
 import Footer from './components/Footer';
 
@@ -13,23 +15,28 @@ function App() {
       {/* 1. Header / Barra de Navegação */}
       <Header />
       
-      {/* Seção Hero de Vídeo Background */}
+      {/* 2. Seção Hero de Vídeo Background */}
       <HeroVideo />
       
-      {/* Seção Premium de Palavras Mágicas */}
+      {/* 3. Seção Premium de Palavras Mágicas */}
       <AppleMagicWords />
+
+      {/* 4. Para Quem É a Impulse IT (3 Perfis de Clientes) */}
+      <TargetAudience />
+
+      {/* 5. Metodologia & Processo Ágil em 5 Passos */}
+      <AgileProcess />
       
-      {/* Seção de Vídeo e Destaques Bento Grid */}
+      {/* 6. Bento Grid com Trabalhos e Tecnologias */}
       <ImpressiveWorks />
+
+      {/* 7. Entregas Tangíveis vs. Resultados de Negócio */}
+      <TangibleDeliveries />
       
-      {/* 2. Showcase de Catálogos (Aba com 4 segmentos) - Ocultado temporariamente via comentário
-      <Showcase />
-      */}
-      
-      {/* Seção de Contato e Desenvolvimento via WhatsApp */}
+      {/* 8. Seção de Conversão e Diagnóstico de 30 min */}
       <ContactCTA />
       
-      {/* 3. Rodapé */}
+      {/* 12. Rodapé Institucional */}
       <Footer />
     </div>
   );
