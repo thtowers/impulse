@@ -20,6 +20,7 @@ export default function HeroVideo() {
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-80 scale-105"
       >
         <source src="/assets/video1.mp4" type="video/mp4" />

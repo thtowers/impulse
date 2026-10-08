@@ -112,7 +112,13 @@ export default function Footer() {
           
           {/* Logo e Missão */}
           <div className="md:col-span-5 flex flex-col items-start">
-            <img src="/assets/logo_atual.png" alt="Impulse Logo" className="h-[36px] w-auto mb-6 brightness-0 invert opacity-90" />
+            <img 
+              src="/assets/logo_atual.png" 
+              alt="Impulse Logo" 
+              loading="lazy" 
+              decoding="async" 
+              className="h-[36px] w-auto mb-6 brightness-0 invert opacity-90" 
+            />
             <p className="text-zinc-400 text-sm leading-relaxed max-w-sm mb-6">
               Software house brasileira que une estratégia de produto e desenvolvimento sob medida. Transformamos ideias em negócios lucrativos com agilidade e cobrança apenas pelo que é desenvolvido.
             </p>

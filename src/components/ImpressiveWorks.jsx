@@ -375,6 +375,8 @@ export default function ImpressiveWorks() {
                         <img
                           src={brandsData.auria.heroImg}
                           alt="Auria Luxury"
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover object-[center_18%] brightness-[0.85]"
                         />
                         <div className="absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-[#1e130f] to-transparent z-10" />
@@ -407,7 +409,7 @@ export default function ImpressiveWorks() {
                         {brandsData.auria.products.map((prod, idx) => (
                           <div key={idx} className="flex flex-col group cursor-pointer">
                             <div className="aspect-[4/5] w-full rounded-lg bg-zinc-50 border border-zinc-100 overflow-hidden mb-1 relative">
-                              <img src={prod.img} alt={prod.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                              <img src={prod.img} alt={prod.name} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                               {prod.tag && (
                                 <span className="absolute top-1 left-1 text-[5px] font-extrabold uppercase tracking-widest px-1 py-0.5 rounded bg-zinc-900 text-white scale-90">
                                   {prod.tag}
@@ -486,7 +488,7 @@ export default function ImpressiveWorks() {
 
                     {/* Hero Parallax */}
                     <div id="hero-forno" className="relative w-full flex-grow overflow-hidden flex items-center bg-black">
-                      <img src={brandsData.forno.heroImg} alt="Forno Napolitano" className="absolute inset-0 w-full h-full object-cover brightness-[0.85]" />
+                      <img src={brandsData.forno.heroImg} alt="Forno Napolitano" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover brightness-[0.85]" />
                       <div className="absolute inset-0 bg-gradient-to-r from-[#0a0503]/70 via-[#0a0503]/25 to-transparent" />
                       <div className="relative z-10 p-5 text-white max-w-[200px] sm:max-w-[240px]">
                         <h2 className="text-xs sm:text-sm md:text-base font-black tracking-tight leading-tight mb-1 uppercase font-sans">
@@ -514,7 +516,7 @@ export default function ImpressiveWorks() {
                         {brandsData.forno.products.map((prod, idx) => (
                           <div key={idx} className="flex flex-col group cursor-pointer">
                             <div className="aspect-[4/5] w-full rounded-lg bg-zinc-50 border border-zinc-100 overflow-hidden mb-1 relative">
-                              <img src={prod.img} alt={prod.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                              <img src={prod.img} alt={prod.name} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                               {prod.tag && (
                                 <span className="absolute top-1 left-1 text-[5px] font-extrabold uppercase tracking-widest px-1 py-0.5 rounded bg-zinc-900 text-white scale-90">
                                   {prod.tag}
@@ -581,6 +583,8 @@ export default function ImpressiveWorks() {
                       <img
                         src="/assets/vega_hero.png"
                         alt="Vega Shoes Hero"
+                        loading="lazy"
+                        decoding="async"
                         className="absolute inset-0 w-full h-full object-cover object-center brightness-[0.92]"
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/60 via-[#1a1a1a]/10 to-transparent pointer-events-none z-10" />
@@ -604,6 +608,8 @@ export default function ImpressiveWorks() {
                       <img
                         src="/assets/veja_2.png"
                         alt="Vega Shoes Destaques"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover object-top"
                       />
                     </div>
