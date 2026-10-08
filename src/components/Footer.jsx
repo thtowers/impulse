@@ -118,7 +118,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 text-xs font-mono text-zinc-400 mb-6">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Florianópolis, SC & Rio de Janeiro, RJ · Brasil</span>
+              <span>Atendimento em todo o Brasil</span>
             </div>
             <div className="flex gap-4">
               <a href="https://wa.me/5548988290742" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:border-white/30 hover:bg-white/5 transition-all">

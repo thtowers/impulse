@@ -15,18 +15,18 @@ const steps = [
     title: 'Começamos Pequeno',
     subtitle: 'Validação sem Desperdício',
     description:
-      'Em vez de tentar construir um monólito de 1 ano, priorizamos o núcleo mais valioso do produto (MVP). Isso diminui seu investimento inicial e permite validar a solução no mercado real muito antes.',
-    deliverable: 'Escopo ágil focado nas principais dores do cliente.',
-    tag: 'Redução de Risco',
+      'Em vez de projetos longos e caros, focamos primeiro no essencial. Isso diminui seu investimento inicial e permite validar a sua ideia no mercado muito mais rápido.',
+    deliverable: 'Plano enxuto focado no que traz resultado imediato.',
+    tag: 'Menos Risco',
   },
   {
     step: '03',
-    title: 'Montamos o Plano & Sprints',
+    title: 'Planejamento e Entregas',
     subtitle: 'Previsibilidade e Transparência',
     description:
-      'Estruturamos as etapas em sprints quinzenais claras. Você sabe exatamente o que será entregue a cada ciclo, com acesso irrestrito ao board de tarefas e métricas de avanço.',
-    deliverable: 'Roadmap de desenvolvimento transparente e estimativas reais.',
-    tag: 'Governança Ágil',
+      'Dividimos o projeto em ciclos curtos de 15 dias. Você acompanha o progresso em tempo real e sabe exatamente o que receberá a cada etapa, sem surpresas.',
+    deliverable: 'Cronograma claro com prazos e entregas reais.',
+    tag: 'Transparência Total',
   },
   {
     step: '04',
