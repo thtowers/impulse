@@ -142,7 +142,7 @@ export default function Footer() {
               <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-6">Navegação</h4>
               <ul className="flex flex-col gap-3">
                 <li><button onClick={scrollToTop} className="text-zinc-400 hover:text-white text-xs transition-colors text-left">Início</button></li>
-                <li><a href="#para-quem" className="text-zinc-400 hover:text-white text-xs transition-colors">Para Quem É</a></li>
+                {/* <li><a href="#para-quem" className="text-zinc-400 hover:text-white text-xs transition-colors">Para Quem É</a></li> */}
                 <li><a href="#metodologia" className="text-zinc-400 hover:text-white text-xs transition-colors">Metodologia</a></li>
                 <li><a href="#diferenciais" className="text-zinc-400 hover:text-white text-xs transition-colors">Diferenciais</a></li>
                 <li><a href="#contato" className="text-zinc-400 hover:text-white text-xs transition-colors">Contato</a></li>

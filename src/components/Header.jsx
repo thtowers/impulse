@@ -54,7 +54,7 @@ export default function Header() {
                   Início
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a 
                   href="#para-quem" 
                   onClick={(e) => {
@@ -65,7 +65,7 @@ export default function Header() {
                 >
                   Para Quem
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a 
                   href="#metodologia" 

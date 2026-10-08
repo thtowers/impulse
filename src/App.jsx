@@ -4,7 +4,7 @@ import HeroVideo from './components/HeroVideo';
 
 // Carregamento sob demanda (Code Splitting) para componentes abaixo da dobra
 const AppleMagicWords = lazy(() => import('./components/AppleMagicWords'));
-const TargetAudience = lazy(() => import('./components/TargetAudience'));
+// const TargetAudience = lazy(() => import('./components/TargetAudience'));
 const AgileProcess = lazy(() => import('./components/AgileProcess'));
 const ImpressiveWorks = lazy(() => import('./components/ImpressiveWorks'));
 const TangibleDeliveries = lazy(() => import('./components/TangibleDeliveries'));
@@ -25,8 +25,8 @@ function App() {
         {/* 3. Seção Premium de Palavras Mágicas */}
         <AppleMagicWords />
 
-        {/* 4. Para Quem É a Impulse IT (3 Perfis de Clientes) */}
-        <TargetAudience />
+        {/* 4. Para Quem É a Impulse IT (Desativado) */}
+        {/* <TargetAudience /> */}
 
         {/* 5. Metodologia & Processo Ágil em 5 Passos */}
         <AgileProcess />
