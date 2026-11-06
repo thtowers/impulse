@@ -11,10 +11,14 @@
             "id": "e6fce3481de39b83",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Apresentacao_Projeto_DiCavalcante.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Apresentacao_Projeto_DiCavalcante"
             }
           }
         ]
@@ -187,8 +191,10 @@
   },
   "active": "e6fce3481de39b83",
   "lastOpenFiles": [
+    "Estratégia de impulsionamento da DiCavalcante.md",
+    "Apresentacao_Projeto_DiCavalcante.md",
+    "Sem título",
     "Reunião com o Sindicato.md",
-    "Sem título.md",
     "Risco de segurança.md",
     "PREVISÃO DE CUSTOS.md",
     "Token melhor envio Rose Acessorios.md",
@@ -212,7 +218,6 @@
     "audio_cliente.md",
     "Sem título 2.md",
     "Seu Pai, que observa em secreto, o recompensará.md",
-    "Sem título 1.md",
     "Sem título.base"
   ]
 }
