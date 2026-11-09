@@ -18,7 +18,7 @@ A conversão esperada na página é o início de uma conversa comercial. O diagn
 
 ## Layout escolhido
 
-A direção visual segue uma estética minimalista inspirada em apresentações de produtos da Apple: títulos expressivos, espaços amplos, mockups em destaque e movimento para conduzir a atenção ao longo da página.
+A direção visual valoriza a identidade da Impulse com uma estética minimalista e contemporânea: títulos expressivos, espaços amplos, mockups em destaque e animações que conduzem a atenção ao longo da página.
 
 | Escolha visual | Aplicação e finalidade |
 | --- | --- |
